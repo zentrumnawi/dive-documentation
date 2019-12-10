@@ -4,4 +4,7 @@
 
 ## Datenbank Referenz
 
-* [QuizQuestion](database/quiz_question.md)
+* [Glossar](database/glossary.md)
+* [Quizfrage](database/quiz_question.md)
+* [Quizantwort](database/quiz_answer.md)
+* [Baumknoten](database/tree_node.md)
