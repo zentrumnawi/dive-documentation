@@ -15,16 +15,16 @@ Das Model definiert eine Frage im Quiz der Web-App zum Selbsttest des Lernerfolg
 
 Die Auswahlmöglichkeiten `QTYPE_CHOICES` sind:
 
-    * Single Choice - Eine der zugeordneten Antworten ist korrekt.
-    * Multiple Choice - Mehrere der zugeordneten Antorten ist korrekt.
-    * Drag and Drop - Die zugeordneten Antworten müssen bestimmten Eigenschaften zu geordnet werden.
-    * Ranking - Die zugeordneten Antowrten müssen in eine gewisse Reihenfolge gebracht werden.
-    * Hotspot - Die zugeordnete Antwort muss auf einem Bild markiert werden.
+* Single Choice - Eine der zugeordneten Antworten ist korrekt.
+* Multiple Choice - Mehrere der zugeordneten Antorten ist korrekt.
+* Drag and Drop - Die zugeordneten Antworten müssen bestimmten Eigenschaften zu geordnet werden.
+* Ranking - Die zugeordneten Antowrten müssen in eine gewisse Reihenfolge gebracht werden.
+* Hotspot - Die zugeordnete Antwort muss auf einem Bild markiert werden.
 
 Die Auswahlmöglichkeiten `DIFFICULTY_CHOICES`sind:
 
-    * 1 - Neuling-Frage
-    * 2 - Einsteiger-Frage
-    * 3 - Fortgeschrittenen-Frage
-    * 4 - Erfahrenen-Frage
-    * 5 - Experten-Frage
+* 1 - Neuling-Frage
+* 2 - Einsteiger-Frage
+* 3 - Fortgeschrittenen-Frage
+* 4 - Erfahrenen-Frage
+* 5 - Experten-Frage
