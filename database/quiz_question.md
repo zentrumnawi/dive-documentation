@@ -4,7 +4,7 @@ Das Model definiert eine Frage im Quiz der Web-App zum Selbsttest des Lernerfolg
 
 | Feldname | Feldtyp | Nutzung |
 | :--- | :--- | :--- |
-| qtext | CharField(max_length=500) | Speichert den Fragetext |
+| qtext | TextField(max_length=500) | Speichert den Fragetext |
 | qtype | CharField(max_length=2, choices=QTYPE_CHOICES) |  |
 | tags | ArrayField(base_field=models.CharField(max_length=200), blank=True, default="",help_text="If you want to add more than one tag, seperate them with commas.") |  |
 | difficulty | IntegerField(choices=DIFFICULTY_CHOICES) |  |
