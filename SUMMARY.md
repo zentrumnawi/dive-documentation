@@ -4,7 +4,11 @@
 
 ## Datenbank Referenz
 
-* [Glossar](database/glossary.md)
-* [Quizfrage](database/quiz_question.md)
-* [Quizantwort](database/quiz_answer.md)
-* [Baumknoten](database/tree_node.md)
+* [*GlossarEntry* Model](database/glossary.md)
+* [*Message* Model](database/message.md)
+* [*QuizQuestion* Model](database/quiz_question.md)
+* [*QuizAnswer* Model](database/quiz_answer.md)
+* [*Slideshow* Model](database/slideshow.md)
+* [*SlideshowPage* Model](database/slideshow_page.md)
+* [*SlideshowImage* Model](database/slideshow_image.md)
+* [*TreeNode* Model](database/tree_node.md)
