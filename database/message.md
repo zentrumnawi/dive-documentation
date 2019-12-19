@@ -3,10 +3,11 @@ Das *Message* Model definiert eine Nachricht, die dem Anwender beim Benutzen der
 | Feldname | Feldtyp | Nutzung |
 | :--- | :--- | :--- |
 | id | UUIDField(primary_key=True, default=uuid.uuid4, editable=False, unique=True) | UUID einer Nachricht |
-| mtype | CharField(max_length=2, choices=MTYPE_CHOICES) | Nachrichtentyp |
-| mtitle | CharField(max_length=100, blank=True, default="", unique_for_date="valid_from") | Nachrichtentitel |
-| mtext | TextField(blank=True, default="") | Nachrichtentext |
+| type | CharField(max_length=2, choices=MTYPE_CHOICES) | Nachrichtentyp |
+| title | CharField(max_length=100, blank=True, default="", unique_for_date="valid_from") | Nachrichtentitel |
+| text | TextField(blank=True, default="") | Nachrichtentext |
 | img_url | URLField(blank=True, default="") | URL, unter der ein Bild abgerufen wird. |
+| img_alt | TextField() | Beschreibung des Bildes |
 | valid_from | DateField(default=date.today) | Anfangsdatum, ab wann die Nachricht angezeigt wird. |
 | valid_to | DateField(default=date.today) | Enddatum, bis wann die Nachricht angezeigt wird. |
 
