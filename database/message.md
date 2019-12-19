@@ -8,11 +8,11 @@ Das *Message* Model definiert eine Nachricht, die dem Anwender beim Benutzen der
 | text | TextField(blank=True, default="") | Nachrichtentext |
 | img_url | URLField(blank=True, default="") | URL, unter der ein Bild abgerufen wird. |
 | img_alt | TextField() | Beschreibung des Bildes |
-| valid_from | DateField(default=date.today) | Anfangsdatum, ab wann die Nachricht angezeigt wird. |
-| valid_to | DateField(default=date.today) | Enddatum, bis wann die Nachricht angezeigt wird. |
+| valid_from | DateTimeField(default=timezone.now) | Anfangsdatum, ab wann die Nachricht angezeigt wird. |
+| valid_to | DateTimeField(default=timezone.now) | Enddatum, bis wann die Nachricht angezeigt wird. |
 
-Das Feld `id` enthält eine eindeutige Nachrichtenkennung und im Feld `mtype` wird der Nachrichtentyp mittels der Auswahlmöglichkeiten von `MTYPE_CHOICES` bestimmt:
+Das Feld `id` enthält eine eindeutige Nachrichtenkennung und im Feld `type` wird der Nachrichtentyp mittels der Auswahlmöglichkeiten von `MTYPE_CHOICES` bestimmt:
 * A:
 * B:
 
-Ein Nachrichtentitel muss nicht unbedingt angegeben werden, weswegen `mtitle` auch leer sein darf. Hingegen muss mindestens eines der Felder `mtext` und `img_url` einen nichtleeren Wert enthalten, um sicherzustellen, dass keine inhaltslose Nachricht erstellt wird. Für die Felder `valid_from` und `valid_to` gelten noch die weiteren Bedingungen, dass die Anzeige der Nachricht nicht vor ihrem Erstellungsdatum anfangen und nicht vor ihrem Anzeigeanfangsdatum enden darf.
+Ein Nachrichtentitel muss nicht unbedingt angegeben werden, weswegen `title` auch leer sein darf. Hingegen muss mindestens eines der Felder `text` und `img_url` einen nichtleeren Wert enthalten, um sicherzustellen, dass keine inhaltslose Nachricht erstellt wird. Für die Felder `valid_from` und `valid_to` gelten noch die weiteren Bedingungen, dass die Anzeige der Nachricht nicht vor ihrem Erstellungszeitpunkt anfangen und nicht vor ihrem Anzeigeanfangszeitpunkt enden darf.
