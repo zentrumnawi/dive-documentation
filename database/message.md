@@ -8,8 +8,8 @@ Das *Message* Model definiert eine Nachricht, die dem Anwender beim Benutzen der
 | text | TextField(blank=True, default="") | Nachrichtentext |
 | img_url | URLField(blank=True, default="") | URL, unter der ein Bild abgerufen wird. |
 | img_alt | TextField() | Beschreibung des Bildes |
-| valid_from | DateTimeField(default=timezone.now) | Anfangsdatum, ab wann die Nachricht angezeigt wird. |
-| valid_to | DateTimeField(default=timezone.now) | Enddatum, bis wann die Nachricht angezeigt wird. |
+| valid_from | DateTimeField(default=timezone.now) | Anfangszeitpunkt, ab wann die Nachricht angezeigt wird. |
+| valid_to | DateTimeField(default=timezone.now) | Endzeitpunkt, bis wann die Nachricht angezeigt wird. |
 
 Das Feld `id` enthält eine eindeutige Nachrichtenkennung und im Feld `type` wird der Nachrichtentyp mittels der Auswahlmöglichkeiten von `MTYPE_CHOICES` bestimmt:
 * A:
