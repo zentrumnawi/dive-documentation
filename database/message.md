@@ -13,4 +13,5 @@ Das *Message* Model definiert eine Nachricht, die dem Anwender beim Benutzen der
 Das Feld `id` enthält eine eindeutige Nachrichtenkennung und im Feld `mtype` wird der Nachrichtentyp mittels der Auswahlmöglichkeiten von `MTYPE_CHOICES` bestimmt:
 * A:
 * B:
+
 Ein Nachrichtentitel muss nicht unbedingt angegeben werden, weswegen `title` auch leer sein darf. Hingegen muss mindestens eines der Felder `mtext` und `img_url` einen nichtleeren Wert enthalten, um sicherzustellen, dass keine inhaltslose Nachricht erstellt wird. Für die Felder `valid_from` und `valid_to` gelten noch die weiteren Bedingungen, dass die Anzeige der Nachricht nicht vor ihrem Erstellungsdatum anfangen und nicht vor ihrem Anzeigeanfangsdatum enden darf.
