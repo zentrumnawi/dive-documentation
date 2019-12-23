@@ -2,7 +2,7 @@ Das *Message* Model definiert eine Nachricht, die dem Anwender beim Benutzen der
 
 | Feldname | Feldtyp | Nutzung |
 | :--- | :--- | :--- |
-| id | UUIDField(primary_key=True, default=uuid.uuid4, editable=False, unique=True) | UUID einer Nachricht |
+| id | AutoField(primary_key=True, editable=False, unique=True) | Nachrichtkennung |
 | type | CharField(max_length=2, choices=MTYPE_CHOICES) | Nachrichtentyp |
 | title | CharField(max_length=100, blank=True, default="", unique_for_date="valid_from") | Nachrichtentitel |
 | text | TextField(blank=True, default="") | Nachrichtentext |
@@ -11,7 +11,7 @@ Das *Message* Model definiert eine Nachricht, die dem Anwender beim Benutzen der
 | valid_from | DateTimeField(default=timezone.now) | Anfangszeitpunkt, ab wann die Nachricht angezeigt wird. |
 | valid_to | DateTimeField(default=timezone.now) | Endzeitpunkt, bis wann die Nachricht angezeigt wird. |
 
-Das Feld `id` enthält eine eindeutige Nachrichtenkennung und im Feld `type` wird der Nachrichtentyp mittels der Auswahlmöglichkeiten von `MTYPE_CHOICES` bestimmt:
+Das Feld `id` enthält eine positive Ganzzahl als eindeutige Nachrichtenkennung und im Feld `type` wird der Nachrichtentyp mittels der Auswahlmöglichkeiten von `MTYPE_CHOICES` bestimmt:
 * A:
 * B:
 
