@@ -8,16 +8,16 @@ Das *QuizQuestion* Model definiert eine Frage im Quiz der App zum Selbsttest des
 | tags | ArrayField(base_field=models.CharField(max_length=200), blank=True, default="", help_text="If you want to add more than one tag, seperate them with commas.") | ??? |
 | difficulty | PositiveSmallIntegerField(choices=QDIFFICULTY_CHOICES) | Schwierigkeitsgrad der Frage |
 
-Das Feld `id` enthält eine positive Ganzzahl als eindeutige Fragekennung und im Feld `type` wird der Fragetyp mittels der Auswahlmöglichkeiten von QTYPE_CHOICES bestimmt:
-* Single Choice: Nur eine gültige Antwort aus mehreren vorgegebenen Antwortmöglichkeiten
-* Multiple Choice: Eine oder mehrere gültige Antworten aus mehreren vorgegebenen Antwortmöglichkeiten
-* Drag and Drop: Merkmalszuordung zu vorgegebenen Antworten
-* Ranking: Reihenfolgenanordnung von vorgegebenen Antworten
-* Hotspot: Markierung der vorgegebenen Antwort in einem Bild
+Das Feld `id` enthält eine positive Ganzzahl als eindeutige Fragekennung und im Feld `type` wird der Fragetyp mittels der Auswahlmöglichkeiten von `QTYPE_CHOICES` bestimmt:
+* _Single Choice_: Nur eine gültige Antwort aus mehreren vorgegebenen Antwortmöglichkeiten
+* _Multiple Choice_: Eine oder mehrere gültige Antworten aus mehreren vorgegebenen Antwortmöglichkeiten
+* _Drag and Drop_: Merkmalszuordung zu vorgegebenen Antworten
+* _Ranking_: Reihenfolgenanordnung von vorgegebenen Antworten
+* _Hotspot_: Markierung der vorgegebenen Antwort in einem Bild
 
 Das Feld `text` darf nicht leer sein, damit keine inhaltslose Frage angezeigt wird und im Feld `difficulty` muss der Frage einer von 5 Schwierigkeitsgraden zugeordnet werden, die mittels den Auswahlmöglichkeiten von `QDIFFICULTY_CHOICES` vorbestimmt sind:
-* 1: Neuling
-* 2: Einsteiger
-* 3: Fortgeschrittener
-* 4: Erfahrener
-* 5: Experte
+* _1_: Neuling
+* _2_: Einsteiger
+* _3_: Fortgeschrittener
+* _4_: Erfahrener
+* _5_: Experte
