@@ -1,4 +1,4 @@
-Das *QuizQuestion* Model definiert eine Frage im Quiz der App zum Selbsttest des Lernerfolgs des Anwenders.
+Das *QuizQuestion*-Model definiert eine Frage im Quiz der App zum Selbsttest des Lernerfolgs des Anwenders.
 
 | Feldname | Feldtyp | Nutzung |
 | :--- | :--- | :--- |
@@ -8,7 +8,7 @@ Das *QuizQuestion* Model definiert eine Frage im Quiz der App zum Selbsttest des
 | tags | ArrayField(base_field=models.CharField(max_length=200), blank=True, default="", help_text="If you want to add more than one tag, seperate them with commas.") | ??? |
 | difficulty | PositiveSmallIntegerField(choices=QDIFFICULTY_CHOICES) | Schwierigkeitsgrad der Frage |
 
-Das Feld `id` enthält eine positive Ganzzahl als eindeutige Fragekennung und im Feld `type` wird der Fragetyp mittels der Auswahlmöglichkeiten von `QTYPE_CHOICES` bestimmt:
+Das Feld `id` enthält einen eindeutigen Integer als Fragekennung und im Feld `type` wird der Fragetyp mittels der Auswahlmöglichkeiten von `QTYPE_CHOICES` bestimmt:
 * _Single Choice_: Nur eine gültige Antwort aus mehreren vorgegebenen Antwortmöglichkeiten
 * _Multiple Choice_: Eine oder mehrere gültige Antworten aus mehreren vorgegebenen Antwortmöglichkeiten
 * _Drag and Drop_: Merkmalszuordung zu vorgegebenen Antworten
