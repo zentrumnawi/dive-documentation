@@ -1,4 +1,4 @@
-Das *Message* Model definiert eine Nachricht, die dem Anwender beim Benutzen der App angezeigt werden kann. Über sie lässt sich beispielsweise auf neu implementierte Inhalte oder Funktionen aufmerksam machen, wobei der Nachrichteninhalt ein Text, ein Bild oder beides sein kann. 
+Das *Message*-Model definiert eine Nachricht, die dem Anwender beim Benutzen der App angezeigt werden kann. Über sie lässt sich beispielsweise auf neu implementierte Inhalte oder Funktionen aufmerksam machen, wobei der Nachrichteninhalt ein Text, ein Bild oder beides sein kann. 
 
 | Feldname | Feldtyp | Nutzung |
 | :--- | :--- | :--- |
@@ -11,7 +11,7 @@ Das *Message* Model definiert eine Nachricht, die dem Anwender beim Benutzen der
 | valid_from | DateTimeField(default=timezone.now) | Anfangszeitpunkt, ab wann die Nachricht angezeigt wird. |
 | valid_to | DateTimeField(default=timezone.now) | Endzeitpunkt, bis wann die Nachricht angezeigt wird. |
 
-Das Feld `id` enthält eine positive Ganzzahl als eindeutige Nachrichtenkennung und im Feld `type` wird der Nachrichtentyp mittels der Auswahlmöglichkeiten von `MTYPE_CHOICES` bestimmt:
+Das Feld `id` enthält einen eindeutigen Integer als Nachrichtenkennung und im Feld `type` wird der Nachrichtentyp mittels der Auswahlmöglichkeiten von `MTYPE_CHOICES` bestimmt:
 * A:
 * B:
 
