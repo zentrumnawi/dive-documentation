@@ -9,4 +9,4 @@ Das *TreeNode*-Model definiert einen Knoten in einer Baumstruktur.
 
 Das Feld `parent` speichert die Kennung des übergeordneten Knotens, wobei im Feld `is_top_level` vermerkt wird,
  ob es sich beim Knoten um die Wurzel der Baumstruktur handelt. Einem Knoten muss im Feld `name` ein eindeutiger 
- Name zugewiesen werden. Das Feld `info` ist hingegen optional und kann auch leer gelessen werden.
+ Name zugewiesen werden. Das Feld `info` ist hingegen optional und kann auch leer gelassen werden.
