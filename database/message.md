@@ -7,8 +7,8 @@ Das *Message*-Model definiert eine Nachricht, die dem Anwender beim Benutzen der
 | text | TextField(blank=True, default="") | Nachrichtentext |
 | img | FileField(upload_to="messages/, null=True) | Eintrag eines möglichen Bildes. |
 | img_alt | CharField(max_length=200, blank=True, default="") | Alternative Textbeschreibung des Bildes |
-| valid_from | DateTimeField(default=timezone.now) | Anfangszeitpunkt, ab wann die Nachricht angezeigt wird. |
-| valid_to | DateTimeField(default=timezone.now) | Endzeitpunkt, bis wann die Nachricht angezeigt wird. |
+| valid_from | DateField(default=datetime.date.today()) | Anfangsdatum, ab wann die Nachricht angezeigt wird. |
+| valid_to | DateField(default=atetime.date.today()) | Enddatum, bis wann die Nachricht angezeigt wird. |
 
 Im Feld `type` wird der Nachrichtentyp mittels der Auswahlmöglichkeiten von `MTYPE_CHOICES` bestimmt:
 * A:
