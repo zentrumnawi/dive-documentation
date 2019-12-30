@@ -5,7 +5,7 @@ Das *Message*-Model definiert eine Nachricht, die dem Anwender beim Benutzen der
 | type | CharField(max_length=2, choices=MTYPE_CHOICES) | Nachrichtentyp |
 | title | CharField(max_length=100, unique_for_date="valid_from") | Nachrichtentitel |
 | text | TextField(blank=True, default="") | Nachrichtentext |
-| img_url | URLField(blank=True, default="") | URL, unter der ein Bild abgerufen wird. |
+| img | FileField(upload_to="messages/, null=True) | Eintrag eines möglichen Bildes. |
 | img_alt | CharField(max_length=200, blank=True, default="") | Alternative Textbeschreibung des Bildes |
 | valid_from | DateTimeField(default=timezone.now) | Anfangszeitpunkt, ab wann die Nachricht angezeigt wird. |
 | valid_to | DateTimeField(default=timezone.now) | Endzeitpunkt, bis wann die Nachricht angezeigt wird. |
