@@ -4,7 +4,7 @@ Das *GlossaryEntry*-Model definiert einen Eintrag in das Glossar der App, der ne
 | :--- | :--- | :--- |
 | term | CharField(max_length=100) | Begriff, der im Glossar erklärt wird. |
 | text | TextField() | Erklärungstext zum Begriff |
-| img_url | URLField(blank=True, default="") | URL, unter der ein Bild abgerufen wird. |
+| img | FileField(upload_to="glossary/", null=True) | Eintrag eines möglichen Bildes. |
 | img_alt | CharField(max_length=200, blank=True, default="") | Alternative Textbeschreibung des Bildes |
 
 Die Felder `term` und `text` dürfen nicht leer sein, damit kein leerer Abschnitt oder nicht erklärter Begriff im 
