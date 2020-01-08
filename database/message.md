@@ -20,10 +20,10 @@ Im Feld `type` wird der Nachrichtentyp mittels der Auswahlmöglichkeiten von `MT
 Im Feld `title` muss unbedingt ein Nachrichtentitel angegeben werden, wobei zu einem bestimmten Anzeigeanfangsdatum keine zwei
 oder mehr Nachrichten mit demselben Titel erstellt werden können. Von den Feldern `text` und `img` muss mindestens eines einen
 nichtleeren Wert enthalten, um sicherzustellen, dass keine inhaltslose Nachricht erstellt wird. Das Feld `img` speichert einen
-Verweis auf ein Bild in Form eines relativen Verzeichnispfades als String, das aber auch erlaubt, dass ein Bild hochgeladen
-werden kann, das dann im `messages`-Verzeichnis gespeichert wird. Wird dem Feld ein nichtleerer Wert zugewiesen, so darf das
-Feld `img_alt` auch nicht leer sein. Für die Felder `valid_from` und `valid_to` gelten die Bedingungen, dass die Anzeige der
-Nachricht nicht vor ihrem Erstellungszeitpunkt anfangen und nicht vor ihrem Anzeigeanfangszeitpunkt enden darf.
+Verweis auf ein Bild in Form eines relativen Verzeichnispfades als String, wobei das Feld auch erlaubt, dass ein Bild
+hochgeladen werden kann, das dann im `messages`-Verzeichnis gespeichert wird. Wird dem Feld ein nichtleerer Wert zugewiesen,
+so darf das Feld `img_alt` auch nicht leer sein. Für die Felder `valid_from` und `valid_to` gelten die Bedingungen, dass die
+Anzeige der Nachricht nicht vor ihrem Erstellungszeitpunkt anfangen und nicht vor ihrem Anzeigeanfangszeitpunkt enden darf.
 
 Da kein Feld als Primärschlüssel ausgewiesen ist, fügt Django automatisch ein Feld hinzu, das einen eindeutigen Integer als
 Kennung enthält.
