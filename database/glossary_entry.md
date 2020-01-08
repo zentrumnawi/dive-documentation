@@ -10,8 +10,8 @@ Bild enthalten kann.
 
 Die Felder `term` und `text` dürfen nicht leer sein, damit kein leerer Abschnitt oder nicht erklärter Begriff im Glossar
 enthalten ist. Im Feld `img` wird ein Verweis auf ein Bild in Form eines relativen Verzeichnispfades als String gespeichert,
-das aber auch erlaubt, dass ein Bild hochgeladen werden kann, das dann im `glossary`-Verzeichnis gespeichert wird. Wird dem
-Feld ein nichtleerer Wert zugewiesen, so darf das Feld `img_alt` auch nicht leer sein.
+wobei das Feld auch erlaubt, dass ein Bild hochgeladen werden kann, das dann im `glossary`-Verzeichnis gespeichert wird. Wird
+dem Feld ein nichtleerer Wert zugewiesen, so darf das Feld `img_alt` auch nicht leer sein.
 
 Da kein Feld als Primärschlüssel ausgewiesen ist, fügt Django automatisch ein Feld hinzu, das einen eindeutigen Integer als
 Kennung enthält.
