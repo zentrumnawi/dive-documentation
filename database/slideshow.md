@@ -3,12 +3,9 @@ einen systematischen Prozess vermitteln sollen.
 
 | Feldname | Feldtyp | Nutzung |
 | :--- | :--- | :--- |
-| title | CharField(max_length=100, unique=True) | Serientitel |
-| pages | ForeignKey(SlideshowPage, on_delete=models.CASCADE, related_name="pages") | Kennungen der Serienseiten |
+| title | CharField(max_length=100, primary_key=True) | Serientitel |
 
-Das Feld `title` darf nicht leer sein und ein Serientitel darf nicht mehrmals vergeben werden. Im Feld `pages`
-werden die Primärschlüssel der Seiten aus dem SlideshowPages-Model gespeichert, aus denen sich die Serie
-zusammensetzt.
-
-Da kein Feld als Primärschlüssel ausgewiesen ist, fügt Django automatisch ein Feld hinzu, das einen
-eindeutigen Integer als Kennung enthält.
+Das einzige Feld `title`, das den Serientitel speichert, ist als Primärschlüssel ausgewiesen und muss deshalb
+angegeben werden und einzigartig sein. Die Seiten, aus denen sich die Serie zusammensetzt, sind im
+SlideshowPage-Model definiert. Dort ist auch vorgegeben, dass bevor ein Slideshow-Objekt gelöscht werden kann,
+erst alle damit in Beziehung stehenden Seiten gelöscht werden müssen.
