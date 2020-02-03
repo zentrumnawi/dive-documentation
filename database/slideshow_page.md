@@ -1,16 +1,18 @@
-Das *SlideshowPage*-Model definiert eine Serienseite für das Slideshow-Model.
+Das *SlideshowPage*-Model definiert eine Seite für das Slideshow-Model.
 
 | Feldname | Feldtyp | Nutzung |
 | :--- | :--- | :--- |
-| position | PositiveSmallIntegerField() | Seitenposition |
+| show | ForeignKey(Slideshow, on_delete=models.PROTECT, related_name="pages", related_query_name="page“, db_index=False) | Kennung der Slideshow |
+| position | PositiveSmallIntegerField(default=1, validators=[validate_position_occupied]) | Seitenposition |
 | title | CharField(max_length=100) | Seitentitel |
 | text | TextField()| Seitentext |
-| images | ForeignKey(SlideshowImage, on_delete=models.CASCADE, related_name="images") | Kennungen der Bilder, die in der Seite angezeigt werden. |
 
-Im Feld `position` muss die Position eingetragen werden, an der die Seite in einer vor- und züruckschaltbaren
-Serie des Slideshow-Models angezeigt werden soll. Die Felder `title` und `text` dürfen nicht leer sein, damit
-keine inhaltslosen Seiten in der Serie vorkommen. Im Feld `images` werden die Primärschlüssel der Bilder aus
-dem SlideshowImage-Model gespeichert, die in der Seite verwendet werden.
+Das Feld `show` speichert den Primärschlüssel des Slideshow-Objekts, für das die Seite als Teil einer Serie
+bestimmt ist. Deren Position innerhalb der Serie wird im Feld `position` eingetragen, wobei geprüft wird, ob
+die angegebene Position bereits belegt ist. Der Seiteninhalt wird in den Feldern `title` und `text`
+gespeichert, die beide nicht leer sein dürfen. Bilder, die in der Seite angezeigt werden sollen, sind im
+SlideshowImage-Model definiert, wo vorgegeben ist, dass beim Löschen eines SlideshowPage-Objekts alle darin
+verwendeten Bilder ebenfalls gelöscht werden.
 
-Da kein Feld als Primärschlüssel ausgewiesen ist, fügt Django automatisch ein Feld hinzu, das einen
-eindeutigen Integer als Kennung enthält.
+Da kein Feld im Model als Primärschlüssel ausgewiesen ist, fügt Django automatisch ein Feld hinzu, das einen
+eindeutigen Integer als Kennung für ein Objekt enthält.
