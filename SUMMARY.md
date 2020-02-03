@@ -4,7 +4,7 @@
 
 ## Datenbank Referenz
 
-* [GlossarEntry-Model](database/glossary_entry.md)
+* [GlossaryEntry-Model](database/glossary_entry.md)
 * [Message-Model](database/message.md)
 * [QuizQuestion-Model](database/quiz_question.md)
 * [QuizAnswer-Model](database/quiz_answer.md)
