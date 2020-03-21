@@ -12,3 +12,11 @@
 * [SlideshowPage-Model](database/slideshow_page.md)
 * [SlideshowImage-Model](database/slideshow_image.md)
 * [TreeNode-Model](database/tree_node.md)
+
+## Die Steckbriefe
+
+* [Einführung](profiles/basics.md)
+* [Endpoints](profiles/view.md)
+* [ProfileModel und Serializer](profiles/profile.md)
+* [Konfiguration](profiles/configuration.md)
+* [Erstellen der Models - Tipps & Tricks](profiles/tipps_and_tricks.md)
