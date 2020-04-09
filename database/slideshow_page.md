@@ -2,7 +2,7 @@ Das *SlideshowPage*-Model definiert eine Seite für das Slideshow-Model.
 
 | Feldname | Feldtyp | Nutzung |
 | :--- | :--- | :--- |
-| show | ForeignKey(Slideshow, on_delete=models.PROTECT, related_name="pages", related_query_name="page“, db_index=False) | Kennung der Slideshow |
+| show | ForeignKey(Slideshow, on_delete=models.PROTECT, related_name="pages", related_query_name="page", db_index=False) | Kennung der Slideshow |
 | position | PositiveSmallIntegerField(default=1, validators=[validate_position_occupied]) | Seitenposition |
 | title | CharField(max_length=100) | Seitentitel |
 | text | TextField()| Seitentext |
