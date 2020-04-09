@@ -2,7 +2,7 @@ Das *QuizAnswer*-Model definiert eine Antwortmöglichkeit bezogen auf eine Frage
 
 | Feldname | Feldtyp | Nutzung |
 | :--- | :--- | :--- |
-| question | ForeignKey(QuizQuestion, on_delete=models.CASCADE, related_name="answers“, related_query_name="answer") | Kennung der Frage | 
+| question | ForeignKey(QuizQuestion, on_delete=models.CASCADE, related_name="answers", related_query_name="answer") | Kennung der Frage | 
 | text | CharField(max_length=200) | Antworttext |
 | correct | BooleanField() | Antwortgültigkeit |
 | feedback_correct | CharField(max_length=400, default="", blank=True) | Rückmeldung für eine richtige Antwortauswahl | 
