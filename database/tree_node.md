@@ -3,7 +3,7 @@ Das *TreeNode*-Model definiert einen Knoten in einer Baumstruktur.
 | Feldname | Feldtyp | Nutzung |
 | :--- | :--- | :--- |
 | is_root | BooleanField(default=False) | Wurzelmarkierung |
-| parent | ForeignKey("self", on_delete=models.CASCADE, null=True, blank=True, related_name="children“, related_query_name="child", validators=[validate_node_is_not_root]) | Kennung des übergeordneten Knotens |
+| parent | ForeignKey("self", on_delete=models.CASCADE, null=True, blank=True, related_name="children", related_query_name="child", validators=[validate_node_is_not_root]) | Kennung des übergeordneten Knotens |
 | name | CharField(max_length=100, unique=True) | Knotenname |
 | info | TextField(default="", blank=True) | Knoteninformation |
 
