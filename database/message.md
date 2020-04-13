@@ -6,7 +6,7 @@ Das *Message*-Model definiert eine Nachricht, die dem Anwender beim Benutzen der
 | type | CharField(max_length=2, choices=MTYPE_CHOICES) | Nachrichtentyp |
 | title | CharField(max_length=100) | Nachrichtentitel |
 | text | TextField(default="", blank=True) | Nachrichtentext |
-| img | ImageField(upload_to="messages/", null=True, blank=True) | Bild |
+| img | ImageField(upload_to="message/", null=True, blank=True) | Bild |
 | img_alt | CharField(max_length=200, default="", blank=True, validators=[validate_img_is_not_empty]) | Alternative Textbeschreibung des Bildes |
 | valid_from | DateField(default=date.today, validators=[validate_date_is_not_past]) | Anzeigeanfangsdatum |
 | valid_to | DateField(default=date.today, validators=[validate_date_is_not_before_valid_from_date]) | Anzeigeenddatum |
