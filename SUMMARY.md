@@ -4,9 +4,9 @@
 
 ## Datenbank Referenz
 
-* [Feedback-Model](database/feedback.md)
 * [GlossaryEntry-Model](database/glossary_entry.md)
 * [Message-Model](database/message.md)
+* [Photograph-Model](database/photograph.md)
 * [QuizQuestion-Model](database/quiz_question.md)
 * [QuizAnswer-Model](database/quiz_answer.md)
 * [Slideshow-Model](database/slideshow.md)
